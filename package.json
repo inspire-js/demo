@@ -11,8 +11,15 @@
   "author": "Lea Verou",
   "license": "MIT",
   "homepage": "https://inspirejs.org",
+  "scripts": {
+    "dependencies": "npx nudeps",
+    "prepare": "npx nudeps"
+  },
   "dependencies": {
     "inspirejs.org": "^3",
     "@inspirejs/plugins": "^1"
+  },
+  "devDependencies": {
+    "nudeps": "^0.2"
   }
 }
