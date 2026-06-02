@@ -16,7 +16,7 @@
     "prepare": "npx nudeps"
   },
   "dependencies": {
-    "inspirejs.org": "^3",
+    "@inspirejs/core": "^3",
     "@inspirejs/plugins": "^1"
   },
   "devDependencies": {

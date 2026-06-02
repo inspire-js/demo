@@ -11,17 +11,20 @@ npm install        # installs deps + generates the import map via nudeps hooks
 npx serve .        # or any static server
 ```
 
-`index.html` loads the generated import map, then imports the core and plugins by bare specifier:
+`index.html` loads the generated import map, then loads `inspire.js`, which imports the core and plugins by bare specifier:
 
 ```html
 <script src="importmap.js"></script>
-<link href="client_modules/inspirejs.org/inspire.css" rel="stylesheet" />
+<link href="client_modules/@inspirejs/core/inspire.css" rel="stylesheet" />
 <link href="theme.css" rel="stylesheet" />
 ...
-<script type="module">
-	import "inspirejs.org";
-	import "@inspirejs/plugins";
-</script>
+<script type="module" src="inspire.js"></script>
+```
+
+```js
+// inspire.js
+import "@inspirejs/core";
+import "@inspirejs/plugins";
 ```
 
 ## Deploy

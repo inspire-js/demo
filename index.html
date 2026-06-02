@@ -8,7 +8,7 @@
 	<!-- nudeps import map: must be a classic script, before any module scripts -->
 	<script src="importmap.js"></script>
 
-	<link href="client_modules/inspirejs.org/inspire.css" rel="stylesheet" />
+	<link href="client_modules/@inspirejs/core/inspire.css" rel="stylesheet" />
 	<link href="theme.css" rel="stylesheet" />
 	<link href="talk.css" rel="stylesheet" />
 </head>
@@ -242,10 +242,7 @@ setInterval(function() {
 	<p>Get it or contribute at <a href="https://github.com/LeaVerou/inspire.js">github.com/LeaVerou/inspire.js</a></p>
 </footer>
 
-<script type="module">
-	import "inspirejs.org";       // core engine (auto-initializes)
-	import "@inspirejs/plugins";  // autoloads the plugins this deck uses
-</script>
+<script type="module" src="inspire.js"></script>
 
 </body>
 </html>
