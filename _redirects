@@ -1,3 +1,10 @@
+# Legacy URLs: core moved to the inspirejs.org npm package, served here via nudeps.
+# These keep old absolute URLs (used by existing decks and docs) resolving.
+/inspire.mjs   /client_modules/inspirejs.org/inspire.mjs        200
+/inspire.js    /client_modules/inspirejs.org/inspire.js         200
+/inspire.css   /client_modules/inspirejs.org/inspire.css        200
+/src/*         /client_modules/inspirejs.org/src/:splat         200
+/plugins/*     /client_modules/@inspirejs/plugins/:splat        200
 
 # Catch all NPM fallback
 node_modules/:modulename/* https://cdn.jsdelivr.net/npm/:modulename@latest/:splat 200

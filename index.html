@@ -5,7 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 	<title>Inspire.js: A brief introduction</title>
 
-	<link href="inspire.css" rel="stylesheet" />
+	<!-- nudeps import map: must be a classic script, before any module scripts -->
+	<script src="importmap.js"></script>
+
+	<link href="client_modules/inspirejs.org/inspire.css" rel="stylesheet" />
 	<link href="theme.css" rel="stylesheet" />
 	<link href="talk.css" rel="stylesheet" />
 </head>
@@ -239,7 +242,10 @@ setInterval(function() {
 	<p>Get it or contribute at <a href="https://github.com/LeaVerou/inspire.js">github.com/LeaVerou/inspire.js</a></p>
 </footer>
 
-<script src="inspire.mjs" type="module"></script>
+<script type="module">
+	import "inspirejs.org";       // core engine (auto-initializes)
+	import "@inspirejs/plugins";  // autoloads the plugins this deck uses
+</script>
 
 </body>
 </html>
