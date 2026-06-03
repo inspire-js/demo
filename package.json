@@ -1,5 +1,5 @@
 {
-  "name": "inspirejs-demo",
+  "name": "@inspirejs/demo",
   "version": "1.0.0",
   "private": true,
   "description": "The inspirejs.org website / demo deck, plus the default Inspire.js theme",
@@ -16,8 +16,7 @@
     "prepare": "npx nudeps"
   },
   "dependencies": {
-    "@inspirejs/core": "^3",
-    "@inspirejs/plugins": "^1"
+    "inspirejs.org": "^3"
   },
   "devDependencies": {
     "nudeps": "^0.2"
