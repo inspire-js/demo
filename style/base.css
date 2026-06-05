@@ -114,8 +114,8 @@ img, video, object {
 
 	display: flex;
 	flex-flow: column;
-	align-items: center;
-	justify-content: center;
+	align-items: safe center;
+	justify-content: safe center;
 	padding: var(--slide-padding);
 	background: canvas;
 	color: canvastext;
