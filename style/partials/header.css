@@ -9,11 +9,11 @@ header.slide:where(section > header) {
 	--overlay-color: var(--color-accent-1);
 	--background: radial-gradient(transparent, var(--overlay-color) 30%), var(--cover-image) center / cover;
 	--fallback-background: linear-gradient(to bottom right var(--in-oklch,),
-			var(--color-magenta),
-				var(--color-aqua),
+			var(--color-pink),
+				var(--color-cyan),
 					var(--color-green),
-				var(--color-aqua),
-			var(--color-magenta));
+				var(--color-cyan),
+			var(--color-pink));
 	background: var(--background, var(--fallback-background));
 	background-blend-mode: hue;
 
@@ -33,9 +33,9 @@ header.slide:where(section > header) {
 	&:where(section section *) {
 		--fallback-background: linear-gradient(to bottom right var(--in-oklch,),
 			var(--color-green),
-				var(--color-aqua),
+				var(--color-cyan),
 					var(--color-yellow),
-				var(--color-aqua),
+				var(--color-cyan),
 			var(--color-green));
 		--overlay-color: var(--color-accent-2);
 	}

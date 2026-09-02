@@ -12,7 +12,7 @@
 
 	h1 {
 		margin-top: auto;
-		color: var(--color-aqua);
+		color: var(--color-cyan);
 		letter-spacing: -.04em;
 		font-size: calc(400% + 15vh);
 

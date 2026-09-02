@@ -1,4 +1,4 @@
-@import url("https://live-colors.verou.me/dist/index.css");
+@import url("../client_modules/@nudeui/color/dist/index.css");
 
 :root {
 	--font-sans: Inter, "Helvetica Neue", Helvetica, system-ui, sans-serif;
@@ -14,19 +14,34 @@
 	 * Colors by visual appearance
 	 */
 
+	/* Hues @nudeui/color does not ship, in the same style as the ones it does */
+	--color-orange: oklch(70% 0.2 55);
+	--color-purple: oklch(54% 0.29 315);
+
+	/* Neutrals, as tints of the base gray */
+	--color-neutral-50: oklch(from var(--color-gray) var(--tint-50));
+	--color-neutral-70: oklch(from var(--color-gray) var(--tint-70));
+	--color-neutral-80: oklch(from var(--color-gray) var(--tint-80));
+	--color-neutral-95: oklch(from var(--color-gray) var(--tint-95));
+
+	/* Translucent neutrals, to tint whatever is behind them */
+	--percentage-neutral-alpha: 60%;
+	--color-neutral-50a: oklch(from var(--color-neutral-50) l c h / var(--percentage-neutral-alpha));
+	--color-neutral-80a: oklch(from var(--color-neutral-80) l c h / var(--percentage-neutral-alpha));
+
 	/* Pale versions of core colors */
 	--percentage-pale: 20%;
 	--color-green-pale: color-mix(in oklab, var(--color-green) var(--percentage-pale), canvas);
 	--color-red-pale: color-mix(in oklab, var(--color-red) var(--percentage-pale), canvas);
-	--color-aqua-pale: color-mix(in oklab, var(--color-aqua) var(--percentage-pale), canvas);
+	--color-cyan-pale: color-mix(in oklab, var(--color-cyan) var(--percentage-pale), canvas);
 
 	/*
 	 * Colors by semantic purpose
 	 */
-	--color-accent-1: var(--color-aqua);
+	--color-accent-1: var(--color-cyan);
 	--color-accent-2: var(--color-green);
 	--color-accent-3: var(--color-yellow);
-	--color-accent-4: var(--color-magenta);
+	--color-accent-4: var(--color-pink);
 
 	/*
 	* Images
@@ -67,10 +82,10 @@ a {
 
 	&:where(:not(:has(:not(em, strong)))) {
 		/* PLain text link */
-		color: var(--color-blue-0);
+		color: var(--color-blue);
 
 		&:where(:visited) {
-			color: var(--color-purple-0);
+			color: var(--color-purple);
 		}
 	}
 }

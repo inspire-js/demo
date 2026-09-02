@@ -16,6 +16,7 @@
     "prepare": "npx nudeps"
   },
   "dependencies": {
+    "@nudeui/color": "^0.0.1",
     "inspirejs.org": "^3"
   },
   "devDependencies": {
